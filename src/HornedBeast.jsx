@@ -1,13 +1,18 @@
-import React from "react";
+import { useState } from "react";
 
-function HornedBeast({ title, imageUrl, description }) {
+export default function HornedBeast({ title, imageUrl, description }) {
+  const [likes, setLikes] = useState(0);
+
+  function handleClick() {
+    setLikes(likes + 1);
+  }
+
   return (
-    <div className="horned-beast">
+    <div>
       <h2>{title}</h2>
-      <img src={imageUrl} alt={title} title={title} />
+      <img src={imageUrl} />
       <p>{description}</p>
+      <span onClick={handleClick}>❤️ {likes}</span>
     </div>
   );
 }
-
-export default HornedBeast;
