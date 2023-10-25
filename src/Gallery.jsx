@@ -1,18 +1,17 @@
 import HornedBeast from "../src/HornedBeast";
-import data from "./assets/beasts-data.json";
 
-export default function Gallery() {
-  const beasts = [];
-
+export default function Gallery({ theme, setTheme, data }) {
   return (
     <div>
-      {data.map((beast) => {
+      {data.map((data) => {
         return (
-          <div key={beast.title}>
+          <div key={data.title}>
             <HornedBeast
-              title={beast.title}
-              imageUrl={beast.imageUrl}
-              description={beast.description}
+              title={data.title}
+              imageUrl={data.imageUrl}
+              description={data.description}
+              theme={data.theme}
+              setTheme={data.setTheme}
             />
           </div>
         );

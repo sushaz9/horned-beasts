@@ -1,10 +1,7 @@
 import "./App.css";
 import React from "react";
 
-export default function Header() {
-  return (
-    <header>
-      <h1>Horned Beasts</h1>
-    </header>
-  );
+export default function Header({ theme }) {
+  return;
+  <header className={theme}>Horned Beasts</header>;
 }

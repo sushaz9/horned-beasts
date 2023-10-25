@@ -2,21 +2,27 @@ import "./App.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Gallery from "./Gallery";
-import Modal from "./assets/Modal";
+import SelectedBeast from "./assets/SelectedBeast";
+import data from "./assets/data.json";
+import { useState } from "react";
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
+  const [showSelectedBeast, setShowSelectedBeast] = useState(false);
 
-  function handleShowModal() {
-    setShowModal(!showModal);
+  function handleShowSelectedBeast() {
+    setShowSelectedBeast(!setShowSelectedBeast);
   }
 
   return (
     <div className="App">
       <Header title="Horned Beasts" />
-      <Gallery /> {""}
-      <buton onClick={handleShowModal}>Show/Hide Modal</buton>
-      {showModal && <Modal handleShowModal={handleShowModal} />}
+      <button onClick={handleShowSelectedBeast}>
+        Show/Hide Selected Beast
+      </button>
+      {showSelectedBeast && (
+        <SelectedBeast handleShowSelectedBeast={handleShowSelectedBeast} />
+      )}
+      <Gallery data={data} />
       <Footer author="Susie Harrison" />
     </div>
   );

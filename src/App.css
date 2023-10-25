@@ -1,4 +1,4 @@
-.modal {
+.selectedBeast {
   height: 100vh;
   width: 100vw;
   background-color: black;
@@ -6,4 +6,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: rgb(189, 37, 37);
+}
+
+button {
+  color: rgb(189, 37, 37);
+}
+
+body {
+  margin: 0;
+  background-color: rgb(242, 255, 196);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.light {
+  background-color: rgb(243, 163, 149);
+  color: black;
+}
+
+.dark {
+  background-color: rgb(48, 87, 89);
+  color: white;
 }
