@@ -1,6 +1,11 @@
 import HornedBeast from "../src/HornedBeast";
 
-export default function Gallery({ theme, setTheme, data }) {
+export default function Gallery({
+  theme,
+  setTheme,
+  data,
+  handleShowSelectedBeast,
+}) {
   return (
     <div>
       {data.map((data) => {
@@ -8,8 +13,9 @@ export default function Gallery({ theme, setTheme, data }) {
           <div key={data.title}>
             <HornedBeast
               title={data.title}
-              imageUrl={data.imageUrl}
+              image_url={data.image_url}
               description={data.description}
+              handleShowSelectedBeast={handleShowSelectedBeast}
               theme={data.theme}
               setTheme={data.setTheme}
             />
